@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universo das Receitas - Transforme sua Cozinha</title>
+    
+    <link rel="icon" href="favicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/9707b66708.js" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'brand-gold': {
+                            DEFAULT: '#C0A062',
+                            'light': '#D4AF37',
+                            'dark': '#A68A4A',
+                        },
+                        'brand-dark': {
+                            '900': '#0a0a0a',
+                            '800': '#111111',
+                            '700': '#1C1C1C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #C0A062; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+    </style>
+    
+    <style>
+/* ANIMAÇÃO DO BOTÃO DE OFERTA (SHAKE + GLOW LARANJA) */
+#botao-oferta {
+    background: #FF8200 !important;
+    animation: shaking 0.75s linear infinite;
+    box-shadow: #FF8200 0px 0px 15px 2px;
+    transition: all .2s ease-in-out;
+}
+
+#botao-oferta:hover {
+    box-shadow:
+        #FF8200 0px 0px 15px 2px,
+        #FF8200C7 0px 0px 30px 0px,
+        #FF82008C 0px 0px 45px 0px;
+    transform: translateY(-3px);
+}
+
+@keyframes shaking {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(2deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+</style>
+
+</head>
+
+<body class="bg-brand-dark-900 text-gray-300 font-sans antialiased">
+
+    <div class="bg-gradient-to-r from-brand-gold to-brand-gold-dark text-brand-dark-900 text-center p-3 font-bold text-sm md:text-base">
+        <i class="fa-solid fa-fire-flame-curved"></i>
+        <span>OFERTA DE LANÇAMENTO: <strong>85% OFF</strong> + Bônus Exclusivos. Válido pelas próximas 24 horas.</span>
+    </div>
+
+    <header class="relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="image_2eb75b.jpg" alt="Fundo de ingredientes nobres" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-brand-dark-900/80 backdrop-blur-sm"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 py-20 md:py-32 relative z-10 flex flex-col lg:flex-row items-center gap-12">
+            
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <h2 class="font-serif text-brand-gold-light text-xl md:text-2xl">Acesso Exclusivo</h2>
+                <h1 class="font-serif text-white text-4xl md:text-6xl lg:text-7xl font-bold mt-2 mb-6" style="line-height: 1.2;">
+                    Sua Cozinha Jamais Será a Mesma.
+                </h1>
+                <p class="text-base md:text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 mb-8">
+                    Descubra o método para transformar ingredientes simples em pratos de alta gastronomia. 
+                    Do básico ao gourmet, ganhe a <strong>confiança</strong> para impressionar, <strong>sem desperdício</strong> e sem complicações.
+                </p>
+                
+                <p class="text-xs text-gray-500 mt-4"><i class="fa-solid fa-shield-halved"></i> Acesso imediato | Garantia de 7 dias</p>
+            </div>
+            
+            <div class="lg:w-1/2 flex justify-center">
+                <img src="mockup.jpg" alt="Mockup do Ebook Universo das Receitas" class="w-full max-w-md lg:max-w-lg drop-shadow-[0_20px_20px_rgba(212,175,55,0.15)]">
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-brand-dark-800 py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="font-serif text-3xl md:text-4xl text-center text-white font-bold mb-4">Este Guia Definitivo é Para Você, Se...</h2>
+            <p class="text-center text-lg text-gray-400 mb-12">Você reconhece algum destes desafios?</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-brand-dark-700/50 p-6 rounded-lg border border-gray-700 flex items-start space-x-4">
+                    <i class="fa-solid fa-check-circle text-brand-gold text-2xl mt-1"></i>
+                    <div>
+                        <h3 class="font-bold text-lg text-white">Sente-se sem criatividade</h3>
+                        <p class="text-gray-400">Cansado de fazer o "arroz com feijão" de sempre e quer variar o cardápio com confiança.</p>
+                    </div>
+                </div>
+                <div class="bg-brand-dark-700/50 p-6 rounded-lg border border-gray-700 flex items-start space-x-4">
+                    <i class="fa-solid fa-check-circle text-brand-gold text-2xl mt-1"></i>
+                    <div>
+                        <h3 class="font-bold text-lg text-white">Quer impressionar</h3>
+                        <p class="text-gray-400">Deseja preparar jantares e sobremesas que deixam amigos e família de queixo caído.</p>
+                    </div>
+                </div>
+                <div class="bg-brand-dark-700/50 p-6 rounded-lg border border-gray-700 flex items-start space-x-4">
+                    <i class="fa-solid fa-check-circle text-brand-gold text-2xl mt-1"></i>
+                    <div>
+                        <h3 class="font-bold text-lg text-white">Busca saúde com sabor</h3>
+                        <p class="text-gray-400">Quer receitas Low Carb, Fitness e saudáveis que não pareçam "comida de dieta".</p>
+                    </div>
+                </div>
+                <div class="bg-brand-dark-700/50 p-6 rounded-lg border border-gray-700 flex items-start space-x-4">
+                    <i class="fa-solid fa-check-circle text-brand-gold text-2xl mt-1"></i>
+                    <div>
+                        <h3 class="font-bold text-lg text-white">Cansou de errar</h3>
+                        <p class="text-gray-400">Procura receitas 100% testadas e aprovadas, com passo a passo claro para evitar desperdício.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-4xl text-center text-white font-bold mb-12">Um Ecossistema Culinário Completo</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div class="bg-brand-dark-800 p-8 rounded-xl border border-brand-dark-700 shadow-lg">
+                    <i class="fa-solid fa-book-sparkles text-brand-gold text-3xl mb-4"></i>
+                    <h3 class="font-serif text-2xl text-white font-bold mb-3">Ebook Master (+500 Receitas)</h3>
+                    <p class="text-gray-400">O seu novo "Google" da cozinha. Receitas validadas de entradas, pratos principais, acompanhamentos e muito mais.</p>
+                </div>
+                
+                <div class="bg-brand-dark-800 p-8 rounded-xl border border-brand-dark-700 shadow-lg">
+                    <i class="fa-solid fa-gem text-brand-gold text-3xl mb-4"></i>
+                    <h3 class="font-serif text-2xl text-white font-bold mb-3"><span class="text-sm text-brand-gold-light block">BÔNUS 1</span> Sobremesas de Luxo</h3>
+                    <p class="text-gray-400">Um guia dedicado apenas a sobremesas dignas de confeitaria, fáceis de replicar em casa.</p>
+                </div>
+
+                <div class="bg-brand-dark-800 p-8 rounded-xl border border-brand-dark-700 shadow-lg">
+                    <i class="fa-solid fa-video text-brand-gold text-3xl mb-4"></i>
+                    <h3 class="font-serif text-2xl text-white font-bold mb-3"><span class="text-sm text-brand-gold-light block">BÔNUS 2</span> Aula: Técnicas de Chef</h3>
+                    <p class="text-gray-400">Sua aula em vídeo (mencionada no seu código) sobre cortes, molhos e empratamento profissional.</p>
+                </div>
+
+                <div class="bg-brand-dark-800 p-8 rounded-xl border border-brand-dark-700 shadow-lg">
+                    <i class="fa-solid fa-users text-brand-gold text-3xl mb-4"></i>
+                    <h3 class="font-serif text-2xl text-white font-bold mb-3"><span class="text-sm text-brand-gold-light block">BÔNUS 3</span> Comunidade VIP</h3>
+                    <p class="text-gray-400">Acesso ao grupo exclusivo de alunos para trocar experiências, tirar dúvidas e postar seus pratos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-brand-dark-800 py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="font-serif text-3xl md:text-4xl text-center text-white font-bold mb-4">Veja Quem Já Está em Outro Nível</h2>
+            <p class="text-center text-lg text-gray-400 mb-12">Mais de 1.450 alunos transformando suas cozinhas.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-brand-dark-900 p-6 rounded-lg border border-brand-dark-700">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/50?img=1" alt="Cliente Ana B." class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-white">Ana B., São Paulo</h4>
+                            <div class="text-brand-gold-light text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"O bônus de sobremesas é inacreditável. Fiz o 'Volcano de Caramelo' e meu marido achou que eu tinha comprado. Recomendo!"</p>
+                </div>
+                
+                <div class="bg-brand-dark-900 p-6 rounded-lg border border-brand-dark-700">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/50?img=2" alt="Cliente Ricardo M." class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-white">Ricardo M., Rio de Janeiro</h4>
+                            <div class="text-brand-gold-light text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Depois que comprei esse Ebook, comecei a comer low carb e diet sem nem sentir que estou de dieta. As receitas são fáceis, rápidas e tão gostosas que virou parte da minha rotina."</p>
+                </div>
+
+                <div class="bg-brand-dark-900 p-6 rounded-lg border border-brand-dark-700">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/50?img=3" alt="Cliente Juliana V." class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-white">Juliana V., Minas Gerais</h4>
+                            <div class="text-brand-gold-light text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Achei que era só mais um e-book, mas a qualidade do material é de curso caro. O suporte no grupo VIP é rápido e atencioso."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="duvidas" class="bg-brand-dark-800 py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="font-serif text-3xl md:text-4xl text-center text-white font-bold mb-12">Perguntas Frequentes</h2>
+            <div class="space-y-4">
+                
+                <details class="bg-brand-dark-700/50 border border-gray-700 rounded-lg p-5 cursor-pointer group">
+                    <summary class="flex justify-between items-center font-bold text-lg text-white group-hover:text-brand-gold-light">
+                        Esse Ebook serve para QUALQUER pessoa mesmo?
+                        <i class="fa-solid fa-chevron-down transition-transform duration-200 group-open:rotate-180"></i>
+                    </summary>
+                    <p class="text-gray-400 mt-3">
+                        Serve pra todo mundo, sem exceção. Se você sabe clicar na tela do celular, já dá pra usar. Idoso, mãe, avó, iniciante, apressado, quem não sabe ferver água, quem vive dizendo “não tenho talento”... não importa. As receitas são tão simples e mastigadas que só não consegue quem realmente não quer tentar. É literalmente impossível “não entender”. Se você respira, você consegue fazer.
+                    </p>
+                </details>
+
+                <details class="bg-brand-dark-700/50 border border-gray-700 rounded-lg p-5 cursor-pointer group">
+                    <summary class="flex justify-between items-center font-bold text-lg text-white group-hover:text-brand-gold-light">
+                        Recebo na hora?
+                        <i class="fa-solid fa-chevron-down transition-transform duration-200 group-open:rotate-180"></i>
+                    </summary>
+                    <p class="text-gray-400 mt-3">
+                        Instantâneo. Pagou, chegou. Diretamente no celular, WhatsApp ou e-mail.
+                    </p>
+                </details>
+                
+                <details class="bg-brand-dark-700/50 border border-gray-700 rounded-lg p-5 cursor-pointer group">
+                    <summary class="flex justify-between items-center font-bold text-lg text-white group-hover:text-brand-gold-light">
+                        O que vem dentro do Ebook, afinal?
+                        <i class="fa-solid fa-chevron-down transition-transform duration-200 group-open:rotate-180"></i>
+                    </summary>
+                    <p class="text-gray-400 mt-3">
+                        Um combo completo: low carb, diet, bolos, sobremesas, lanches rápidos, receitas saudáveis, opções econômicas e versões leves dos clássicos — tudo organizado para você cozinhar fácil, rápido e sem gastar muito.
+                    </p>
+                </details>
+                
+                <details class="bg-brand-dark-700/50 border border-gray-700 rounded-lg p-5 cursor-pointer group">
+                    <summary class="flex justify-between items-center font-bold text-lg text-white group-hover:text-brand-gold-light">
+                        Tenho outra dúvida. Como falo com vocês?
+                        <i class="fa-solid fa-chevron-down transition-transform duration-200 group-open:rotate-180"></i>
+                    </summary>
+                    <p class="text-gray-400 mt-3">
+                        Claro! Nossa equipe de suporte está pronta para ajudar. 
+                        <a href="https://api.whatsapp.com/send?phone=77998583105&text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20Universo%20das%20Receitas%21" target="_blank" class="text-brand-gold font-bold underline hover:text-brand-gold-light">
+                            Clique aqui para falar conosco no WhatsApp
+                        </a>.
+                    </p>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="oferta" class="py-16 md:py-24 bg-brand-dark-900">
+        <div class="container mx-auto px-6 max-w-lg">
+            
+            <div class="bg-brand-dark-800 rounded-2xl border-2 border-brand-gold p-8 md:p-12 text-center shadow-2xl shadow-brand-gold/20">
+                
+                <h3 class="font-serif text-3xl md:text-4xl text-white font-bold mb-4">Acesso Imediato e Vitalício</h3>
+                <p class="text-gray-400 text-lg mb-6">Receba todo o ecossistema "Universo das Receitas":</p>
+
+                <div class="my-6">
+                    <span class="text-xl text-gray-500 line-through">De R$197,00</span>
+                    <p class="text-white font-bold text-5xl md:text-6xl my-2">
+                        R$27<span class="text-4xl md:text-5xl align-top">,99</span>
+                    </p>
+                    <p class="font-bold text-brand-gold text-lg">Pagamento Único. Acesso Vitalício.</p>
+                </div>
+                
+                <div class="bg-red-900/50 border border-red-700 rounded-lg p-4 my-8">
+                    <p class="text-red-300 font-bold uppercase text-sm">Esta Oferta de Lançamento Expira em:</p>
+                    <div id="countdown" class="text-3xl text-white font-bold tracking-widest" aria-live="polite">
+                        00:00:00
+                    </div>
+                </div>
+                
+                <a href="SEU_LINK_DE_CHECKOUT" id="botao-oferta"
+   class="block w-full text-white font-bold uppercase tracking-wider text-lg py-5 px-10 rounded-lg">
+   <i class="fa-solid fa-lock mr-2"></i>
+   Quero Meu Acesso Agora
+</a>
+                
+                <ul class="text-left space-y-3 mt-8 text-gray-300">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 w-6"></i>+500 Receitas Master</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 w-6"></i>Bônus: Sobremesas de Luxo</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 w-6"></i>Bônus: Aula de Técnicas de Chef</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 w-6"></i>Bônus: Comunidade VIP</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 w-6"></i>Acesso Vitalício + Atualizações</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 w-6"></i>Suporte Exclusivo</li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-5xl flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/3 text-center">
+                <img src="selo.png" alt="Selo de Garantia de 7 Dias" class="w-48 h-48 mx-auto">
+            </div>
+            <div class="md:w-2/3 text-center md:text-left">
+                <h2 class="font-serif text-3xl md:text-4xl text-white font-bold mb-4">Seu Risco é Absolutamente Zero</h2>
+                <p class="text-lg text-gray-300 mb-4">
+                    Temos 110% de confiança na transformação que o "Universo das Receitas" vai causar na sua vida. 
+                    Por isso, você tem <strong>7 Dias de Garantia Incondicional</strong>.
+                </p>
+                <p class="text-gray-400">
+                    Se, por qualquer motivo, você não achar que este foi o melhor investimento que fez pela sua cozinha, 
+                    basta nos enviar um único e-mail. Devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark-900 border-t border-brand-dark-700 py-10">
+        <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+            <p class="font-serif text-lg text-brand-gold-light mb-4">Universo das Receitas</p>
+            <p class="mb-4">
+                © 2025 Universo das Receitas. Todos os direitos reservidos.
+                <br>
+                CNPJ: 00.000.000/0001-00 - Nome da Empresa LTDA
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="/termos-de-uso" class="hover:text-brand-gold-light">Termos de Uso</a>
+                <span>|</span>
+                <a href="/politica-de-privacidade" class="hover:text-brand-gold-light">Política de Privacidade</a>
+            </div>
+            <p class="text-xs mt-8 text-gray-600">
+                Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.
+            </p>
+        </div>
+    </footer>
+
+    <div id="sticky-cta-bar" class="fixed bottom-0 left-0 right-0 bg-brand-dark-800/90 backdrop-blur-lg border-t-2 border-brand-gold p-4 md:hidden z-50 transition-transform duration-500 translate-y-full">
+        <div class="flex justify-between items-center">
+            <div>
+                <p class="text-sm font-bold text-white">Oferta de Lançamento</p>
+                <p class="text-lg font-bold text-brand-gold-light">De R$197 por 27,90</p>
+            </div>
+            <a href="#oferta" class="bg-brand-gold text-brand-dark-900 font-bold py-3 px-5 rounded-lg text-sm uppercase">
+                Garantir Desconto
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            if (!countdownElement) return;
+
+            let durationInSeconds = 23 * 3600 + 59 * 60 + 59;
+            
+            let storedTime = localStorage.getItem('countdownTime');
+            let storedEndTime = localStorage.getItem('countdownEndTime');
+
+            if (storedTime && storedEndTime && new Date().getTime() < storedEndTime) {
+                durationInSeconds = Math.round((storedEndTime - new Date().getTime()) / 1000);
+            } else {
+                const endTime = new Date().getTime() + durationInSeconds * 1000;
+                localStorage.setItem('countdownEndTime', endTime);
+            }
+
+            const timer = setInterval(() => {
+                if (durationInSeconds <= 0) {
+                    clearInterval(timer);
+                    countdownElement.innerHTML = "00:00:00";
+                    localStorage.removeItem('countdownTime');
+                    localStorage.removeItem('countdownEndTime');
+                    return;
+                }
+
+                durationInSeconds--;
+                localStorage.setItem('countdownTime', durationInSeconds);
+                
+                let hours = Math.floor(durationInSeconds / 3600);
+                let minutes = Math.floor((durationInSeconds % 3600) / 60);
+                let seconds = durationInSeconds % 60;
+
+                countdownElement.innerHTML = 
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+            }, 1000);
+        }
+
+        function setupStickyBar() {
+            const stickyBar = document.getElementById('sticky-cta-bar');
+            const heroSection = document.querySelector('header');
+            
+            if (!stickyBar || !heroSection) return;
+
+            const showBar = () => {
+                if (window.scrollY > (heroSection.offsetHeight - 100)) {
+                    stickyBar.classList.remove('translate-y-full');
+                } else {
+                    stickyBar.classList.add('translate-y-full');
+                }
+            };
+            
+            window.addEventListener('scroll', showBar);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            startCountdown();
+            setupStickyBar();
+        });
+    </script>
+   <script>
+    // bloqueia quando tenta sair
+    history.pushState(null, null, location.href);
+
+    window.onpopstate = function () {
+        setTimeout(function() {
+            window.location.href = "https://google.com";
+        }, 200);
+    };
+
+    // redirecionar lead ao minimizar / trocar de aba
+    document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState === "hidden") {
+            window.location.href = "https://example.com";
+        }
+    });
+</script>
+
+<!-- ANTI-CÓPIA / ANTI-CLIQUE / ANTI-SELEÇÃO -->
+
+<style>
+/* bloqueia seleção */
+* {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+/* overlay invisivel */
+#anti-copy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999999;
+    background: transparent;
+    pointer-events: none;
+}
+</style>
+
+<div id="anti-copy"></div>
+
+<script>
+// bloqueia clique direito
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+// bloqueia arrastar complementos
+document.addEventListener("dragstart", e => e.preventDefault());
+
+// BLOQUEIA CTRL + C / CTRL + S / CTRL + U / CTRL + A / CTRL + P
+document.addEventListener("keydown", function(e) {
+    if (
+        (e.ctrlKey && ["c","u","s","a","p"].includes(e.key.toLowerCase())) ||
+        (e.metaKey && ["c","u","s","a","p"].includes(e.key.toLowerCase()))
+    ) {
+        e.preventDefault();
+    }
+});
+
+// bloqueia seleção
+document.addEventListener("selectstart", e => e.preventDefault());
+
+// não arrastar img
+document.querySelectorAll("img").forEach(img => {
+    img.setAttribute("draggable", "false");
+});
+
+// impede prtsc
+document.addEventListener("keyup", function(e) {
+    if (e.key === "PrintScreen") {
+        navigator.clipboard.writeText("");
+        alert("PrintScreen desativado nesta página.");
+    }
+});
+</script>
+</body>
+</html>
